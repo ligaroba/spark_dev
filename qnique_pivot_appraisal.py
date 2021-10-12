@@ -190,4 +190,4 @@ def getQuniqueData(initDate):
 indate=getPrevDate(str(getCurrDate()),1)
 print('Running for date : '+ indate)       
 df=getQuniqueData(indate)
-getWriteTable(df,'appraisal_score_cards','qnique')
+getWriteTable(df,'{DESTINATION_TABLENAME}','{KEYSPACE_NAME}')
