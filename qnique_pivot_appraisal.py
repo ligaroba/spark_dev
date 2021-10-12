@@ -67,7 +67,7 @@ def getWriteTable(df,tablename,keysp):
 
 		
 def getReadQniqueCassandra(sql):
-        getSparkSession().catalog.dropTempView("uvc_match_sales")
+        getSparkSession().catalog.dropTempView("{VIEW_NAME}")
         createDDL = """CREATE TEMPORARY VIEW {VIEW_NAME}\
                  USING org.apache.spark.sql.cassandra\
                  OPTIONS (\
